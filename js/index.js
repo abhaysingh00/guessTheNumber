@@ -57,7 +57,8 @@ againBtn.addEventListener("click", function(){
      input.style.display="block";
      input.value="NUMBER";
      guessBtn.style.display="block";
-     msg.innerText="GUESS THE  NUMBER ";   
+     msg.innerText="GUESS THE  NUMBER ";
+     document.body.style.backgroundColor="white";
         
      
 })
