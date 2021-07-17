@@ -1,7 +1,7 @@
 let guessBtn=document.getElementById("guess-btn");
 let input =document.getElementById("input");
 let currentValue=document.getElementById("value");
-score =20;
+score =10;
 let randomValue=Math.floor(Math.random()*100)+1;
 let msg=document.getElementById("msg");
 let scoreCount=document.getElementById("score-count");
@@ -17,7 +17,7 @@ guessBtn.addEventListener("click",function(){
          score-=1;
          scoreCount.innerText="SCORE = "+ score;
          currentValue.innerText=input.value;
-    }
+    
          if (input.value>randomValue){
              msg.innerText="TOO HIGH";   
         }
@@ -27,20 +27,13 @@ guessBtn.addEventListener("click",function(){
             guessBtn.style.display="none";
             again.style.display="block";
             document.body.style.backgroundColor="yellow";
-            if (score>=highScore)
-            highScore=score;
-            highScoreEle.innerText="BEST SCORE = " + highScore ;
-          
-
-
-
-            
-
-    }
-         else {
-            msg.innerText="TOO LOW";
+            if (score>=highScore){
+               highScore=score;
+               highScoreEle.innerText="BEST SCORE = " + highScore ;}}
+            else {
+               msg.innerText="TOO LOW";
              
-    }
+    }} 
     if (score===0){
     again.style.display="block";
     input.style.display="none";
@@ -51,15 +44,16 @@ guessBtn.addEventListener("click",function(){
 
 })
 againBtn.addEventListener("click", function(){
-     score = 20;
+     score = 10;
      scoreCount.innerText="SCORE = "+ score;
      currentValue.innerText="";
      input.style.display="block";
      guessBtn.style.display="block";
-     msg.innerText="GUESS THE  NUMBER ";
+     msg.innerText="GUESS A  NUMBER  BETWEEN 1 TO 100";
      document.body.style.backgroundColor="white";
      again.style.display="none";
-     againBtn.style.display="none";
+     randomValue=Math.floor(Math.random()*100)+1;
+     
         
      
 })
