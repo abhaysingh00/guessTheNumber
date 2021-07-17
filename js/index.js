@@ -55,10 +55,11 @@ againBtn.addEventListener("click", function(){
      scoreCount.innerText="SCORE = "+ score;
      currentValue.innerText="";
      input.style.display="block";
-     input.value="NUMBER";
      guessBtn.style.display="block";
      msg.innerText="GUESS THE  NUMBER ";
      document.body.style.backgroundColor="white";
+     again.style.display="none";
+     againBtn.style.display="none";
         
      
 })
